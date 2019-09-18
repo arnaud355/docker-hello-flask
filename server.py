@@ -16,7 +16,11 @@ class HelloWorld(Resource):
 
 class Meteo(Resource):
     def get(self,x):
-        return {'bonjour': x}
+        return {x}
+
+class Info-ville-Meteo(Resource):
+    def get(self,x):
+        return {x}
 
 class Multiply(Resource):
     def get(self, x):
@@ -80,6 +84,7 @@ api.add_resource(Multiply, '/multiply/<int:x>')
 api.add_resource(Add, '/add/')
 api.add_resource(Even, '/even/<int:x>')
 api.add_resource(Meteo, 'https://www.metaweather.com/api/location/search/?query=<string:x>')
+api.add_resource(Info-ville-Meteo, 'https://www.metaweather.com/api/location/<int:x>')
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0')
