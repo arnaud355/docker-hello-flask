@@ -35,6 +35,15 @@ class Even(Resource):
         else:
             return {'Le nombre est impair': result_even}
 
+@app.route('/api', methods=['POST'])
+class Model(Resource):
+    def get(self, x):
+        result_even = x % 2
+        if result_even == 0:
+            return {'Le nombre est pair':result_even}
+        else:
+            return {'Le nombre est impair': result_even}
+
 class Add(Resource):
     def get(self):
         args = parser.parse_args()
