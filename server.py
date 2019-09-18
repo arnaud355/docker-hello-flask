@@ -18,7 +18,7 @@ class Meteo(Resource):
     def get(self,x):
         return {x}
 
-class Info-ville-Meteo(Resource):
+class Info_ville_Meteo(Resource):
     def get(self,x):
         return {x}
 
